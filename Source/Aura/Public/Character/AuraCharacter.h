@@ -1,29 +1,28 @@
-// Gabriel GAS Project
+﻿// Gabriel GAS Project
 
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
-#include "AuraCharacterBase.generated.h"
+#include "AuraCharacterBase.h"
+#include "AuraCharacter.generated.h"
 
 UCLASS()
-class AURA_API AAuraCharacterBase : public ACharacter
+class AURA_API AAuraCharacter : public AAuraCharacterBase
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	AAuraCharacterBase();
+	AAuraCharacter();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 };
